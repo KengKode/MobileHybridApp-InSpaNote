@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>InSpaNote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="homePage">
+	<div data-role="header" id="header">
+		<a href="#aboutPage" data-rel="dialog" data-icon="info">about</a>
+		<h1>In-Spa-Note</h1>
+		<a class="ui-btn-right" data-icon="plus" id="addNoteButton">new</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" id="noteList" data-split-icon="delete">
+			<li data-role="list-divider">You should not see me!</li>
+		</ul>
+	</div>
+</div>
+
+<div data-role="page" id="aboutPage">
+	<div data-role="header"><h1>About</h1></div>
+	<div data-role="content">
+		<p>This app mimics the functionality of SPA - Single Page App, developed for learning basic programming in mobile hybrid development. Please feel free to use and help us make it better by forking the code from <a href="http://github.com/kengkode/MobileHybridApp-InSpaNote">GitHub</a>.</p>
+	</div>
+</div>
+
+<div data-role="page" id="editPage">
+	<div data-role="header">
+		<a href="#" data-rel="back" data-icon="delete">cancel</a>
+		<h1 id="editTitle">Note</h1>
+		<a class="ui-btn-right" id="saveNoteButton" data-icon="check" data-theme="b">save</a>
+	</div>
+	<div data-role="content">
+		<form>
+		<ul data-role="listview" id="noteFields">
+		    <li data-role="fieldcontain">            
+		    	<label for="noteMessage">Message:</label>            
+				<textarea name="noteMessage" id="noteMessage" placeholder="more information here..."></textarea>
+		    </li>
+		</ul>
+		</form> 
+	</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
