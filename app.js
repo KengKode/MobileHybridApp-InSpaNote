@@ -20,14 +20,12 @@ var inspaNote = function() {
         //
         // YOUR CODE SHOULD BEGIN BELOW
         //////////////////////////////////////////////////////////////////
-        if(localStorage) {
-            var data = localStorage[APPKEY];
-            if(data) {
-                notes = JSON.parse(data);
-            } else {
-                syncNotes();
-            }
-        }
+
+
+
+
+
+
         /////////////////////////////////////////////////////////////////
         // YOUR CODE SHOULD END ABOVE
     };
@@ -64,24 +62,13 @@ var inspaNote = function() {
             //
             // YOUR CODE SHOULD BEGIN BELOW
             ///////////////////////////////////////////////////////////////////
-            var link = $('<a>');
-            link.attr('href', '#').attr('data-noteidx', i).append(note.message);
-            link.bind('click', function() {
-                var index = $(this).data('noteidx');
-                editNote(index);
-            });
 
-            var sublink = $('<a>');
-            sublink.attr('data-noteidx', i)
-            sublink.bind('click', function() {
-                var index = $(this).data('noteidx');
-                deleteNote(index);
-            });
 
-            var li = $('<li>');
-            li.append(link).append(sublink);
 
-            list.append(li);
+
+
+
+
             /////////////////////////////////////////////////////////////////
             // YOUR CODE SHOULD END ABOVE
         }
